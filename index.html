@@ -9,6 +9,23 @@
 
     <script src="https://cdn.tiny.cloud/1/q3w2tbjf56ja8t8r3tlnwh97u1ppntqdw6v9ppnppkinp4q5/tinymce/5/tinymce.min.js"
         referrerpolicy="origin"></script>
+
+    <script>
+        tinymce.init({
+            selector: '#myEditor',
+            height: 500,
+            plugins: [
+                'advlist autolink lists link image charmap print preview anchor',
+                'searchreplace visualblocks code fullscreen',
+                'insertdatetime media table paste code help wordcount'
+            ],
+            toolbar: 'undo redo | formatselect | ' +
+                'bold | italic | backcolor | alignleft aligncenter ' +
+                'alignright alignjustify | bullist numlist outdent indent | ' +
+                'removeformat | help wordcount',
+            content_style: 'body { font-family:Helvetica,Arial,sans-serif; font-size:14px }'
+        });
+    </script>
 </head>
 
 <body>
@@ -16,8 +33,6 @@
     <textarea id="myEditor">
 
     </textarea>
-
-    <script src="./js/configTiny.js"></script>
 </body>
 
 </html>
